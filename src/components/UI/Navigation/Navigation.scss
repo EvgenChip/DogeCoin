@@ -1,0 +1,29 @@
+.navigation {
+  padding-top: 500px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  &__button {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    opacity: 0.6;
+    transition: opacity 0.4s ease;
+    font-size: 14px;
+    line-height: 150%;
+
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+    &_active {
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      opacity: 0.9;
+    }
+  }
+}

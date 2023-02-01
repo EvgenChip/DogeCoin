@@ -1,0 +1,23 @@
+.header {
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+
+  &__nav {
+    ul {
+      display: flex;
+      gap: 42px;
+      li {
+        color: transparent;
+
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    text-align: center;
+&_tel{
+    a{padding-top: 20px;}
+}
+  }
+}

@@ -1,0 +1,30 @@
+.buttonWrap {
+  margin-left: 20px;
+  height: 60px;
+  transform: skew(-20deg);
+
+  border: 1px solid #fff;
+  cursor: pointer;
+
+}
+
+.normalType {
+  width: 282px;
+  background: #c2ab81;
+  &:hover {
+    background: #928061;
+  }
+
+
+
+}
+
+.smallType {
+    &:hover {
+        background: #928061;
+      }
+  img {
+    padding-top: 20px;
+  }
+  width: 93px;
+}
