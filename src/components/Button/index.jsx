@@ -6,6 +6,10 @@ const buttonType = {
   small: "smallType",
 };
 
-export const Button = ({ children, type = "normal" }) => {
-  return <div className={`buttonWrap ${buttonType[type]}`}>{children}</div>;
+export const Button = ({ children, type = "normal", onClick }) => {
+  return (
+    <div onClick={onClick} className={`buttonWrap ${buttonType[type]}`}>
+      {children}
+    </div>
+  );
 };

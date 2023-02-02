@@ -3,11 +3,13 @@ import logoHeader from "../../assets/image/logoHeader.svg";
 import iconTel from "../../assets/image/iconTel.svg";
 import { Button } from "../Button";
 import "./header.scss";
+import { Burger } from "./Burger/Burger";
 
-export const Header = () => {
+export const Header = ({ stateModalActive }) => {
   return (
     <div className="container">
       <div className="header">
+        <Burger />
         <div className="header__logo">
           <img src={logoHeader} alt="" />
         </div>
@@ -38,10 +40,8 @@ export const Header = () => {
           <Button type="small">
             <img src={iconTel} alt="" />
           </Button>
-          <Button>
-            <a href="">
-              <p>Оставить заявку</p>{" "}
-            </a>
+          <Button onClick={stateModalActive}>
+            <p>Оставить заявку</p>{" "}
           </Button>
           <div className="contacts_request"></div>
         </div>

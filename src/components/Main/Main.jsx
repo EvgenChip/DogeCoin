@@ -1,10 +1,10 @@
 import "./Main.scss";
 import { DATA } from "../../data";
 import { Information } from "./Information";
-import { Sidebar } from "./Sidebar/Sidebar";
+
 import { Navigation } from "../UI/Navigation/Navigation";
 import { useState } from "react";
-export const Main = () => {
+export const Main = ({ stateModalActive }) => {
   const [activeTab, setActiveTab] = useState(1);
 
   const changeActiveTab = (id) => {
@@ -21,7 +21,10 @@ export const Main = () => {
             ? "main__slider doge_down"
             : "main__slider doge_up"
         }>
-        <Information block={DATA.find(({ id }) => id === activeTab)} />
+        <Information
+          stateModalActive={stateModalActive}
+          block={DATA.find(({ id }) => id === activeTab)}
+        />
         <Navigation activeTab={activeTab} setActiveTab={changeActiveTab} />
       </div>
     </div>

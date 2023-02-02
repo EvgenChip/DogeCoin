@@ -1,14 +1,19 @@
 import { Header } from "./components/Header/Header";
 import { Main } from "./components/Main/Main";
-import axios from "axios";
-import data from "./API/data.js";
+
 import { Cards } from "./components/Cards/Cards";
+import { Modal } from "./components/Modal/Modal";
+import { useApp } from "./hooks/useApp";
+
 function App() {
+  const { modalActive, stateModalActive } = useApp();
+  console.log(modalActive);
   return (
     <div>
-      <Header />
-      <Main />
+      <Header stateModalActive={stateModalActive} />
+      <Main stateModalActive={stateModalActive} />
       <Cards />
+      {modalActive && <Modal stateModalActive={stateModalActive} />}
     </div>
   );
 }

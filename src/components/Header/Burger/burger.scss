@@ -1,0 +1,92 @@
+.burger {
+  display: none;
+  &__active {
+    box-shadow: 0 0 10px rgba(214, 119, 10, 0.763);
+    border-radius: 4px;
+  }
+  &__menu {
+    z-index: 51;
+    display: flex;
+    align-items: center;
+    width: 41px;
+    height: 35px;
+    position: absolute;
+    top: 36px;
+
+    padding-left: 2px;
+    cursor: pointer;
+  }
+
+  &__line {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.55);
+    transition: 0.5s ease;
+    &:hover {
+      transition: 0.5s ease;
+      background: greenyellow;
+    }
+    &:hover::before {
+      background: greenyellow;
+      width: 30px;
+      transition: 0.5s ease;
+    }
+    &:hover::after {
+      background: greenyellow;
+      width: 30px;
+      transition: 0.5s ease;
+    }
+
+    &::before {
+      content: "";
+      width: 15px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.55);
+      position: absolute;
+      top: 6px;
+      transition: 0.5s ease;
+    }
+    &::after {
+      content: "";
+      width: 15px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.55);
+      position: absolute;
+      top: -6px;
+      transition: 0.5s ease;
+    }
+  }
+}
+.active {
+  transition: 1s ease;
+  .burger__line {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background: yellowgreen;
+    &::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: yellowgreen;
+      position: absolute;
+      top: 6px;
+      transition: 1s ease;
+    }
+    &::after {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: yellowgreen;
+      position: absolute;
+      top: -6px;
+      transition: 1s ease;
+    }
+  }
+}
+@media (max-width: 1492px) {
+  .burger {
+    display: inline;
+  }
+}
