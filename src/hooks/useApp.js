@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 
 export const useApp = () => {
   const [modalActive, setModalActive] = useState(false);
@@ -6,6 +6,7 @@ export const useApp = () => {
   const stateModalActive = useCallback(() => {
     setModalActive(!modalActive);
   }, [modalActive]);
+
   return {
     modalActive,
     setModalActive,

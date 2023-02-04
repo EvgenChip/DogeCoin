@@ -1,50 +1,47 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
+
 import { Button } from "../../Button";
-
-import "./form.scss";
 import { useForm } from "./hooks/useForm.js";
+import "./styles.scss";
 
-export const Form = ({
-  active,
-  setFormActive,
-  setModalActive,
-  orders,
-  setMetricActive,
-  setOrders,
-}) => {
+export const Form = ({ stateModalActive }) => {
   const {
-    userName,
     formValid,
+    question,
     email,
     phone,
+    questionDirty,
     phoneDirty,
     emailError,
     phoneError,
     emailDirty,
+    questionError,
+    userNameDirty,
+    userName,
+    questionHandler,
     sendForm,
-    nameUserHandler,
     emailHandler,
     blurHandler,
     phoneHandler,
-  } = useForm(
-    setOrders,
-    setModalActive,
-    setFormActive,
-    setMetricActive,
-    orders
-  );
+    changeUserName,
+    blurName,
+  } = useForm(stateModalActive);
+
   return (
     <form className="form">
+      {userNameDirty && userName === "" && (
+        <div className="form__error">Введите ваше имя</div>
+      )}
       <input
         value={userName}
-        onChange={nameUserHandler}
+        onChange={changeUserName}
+        onBlur={blurName}
         id="formName"
         type="text"
         name="name"
         className="form__input"
         placeholder="Ваше имя*"
       />
-
       <input
         value={email}
         onChange={emailHandler}
@@ -58,7 +55,6 @@ export const Form = ({
       {emailDirty && emailError && (
         <div className="form__error">{emailError}</div>
       )}
-
       <input
         value={phone}
         onChange={phoneHandler}
@@ -72,20 +68,23 @@ export const Form = ({
       {phoneDirty && phoneError && (
         <div className="form__error">{phoneError}</div>
       )}
-      <input
-        // value={phone}
-        // onChange={phoneHandler}
+      <textarea
+        value={question}
+        onChange={questionHandler}
+        onBlur={blurHandler}
         placeholder="Ваш вопрос*"
         id="formQuestion"
         type="text"
         name="question"
         className="form__input_question"
       />
+      {questionDirty && question === "" && (
+        <div className="form__error">{questionError}</div>
+      )}
       <div className="form__button">
-        <button onClick={sendForm} disabled={!formValid}>
-          <Button></Button>
-        </button>
-
+        <Button onClick={sendForm} disabled={!formValid}>
+          <p className="form__button_inner">Отправить</p>
+        </Button>
         <span>
           Нажимая на кнопку “Оставить заявку” вы <br /> соглашаетесь <br /> с
           <a href="">“Пользовательским соглашением”</a>

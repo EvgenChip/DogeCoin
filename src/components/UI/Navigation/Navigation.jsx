@@ -1,6 +1,6 @@
-import { tab } from "@testing-library/user-event/dist/tab";
-import { useState } from "react";
-import "./Navigation.scss";
+import React from "react";
+
+import "./styles.scss";
 
 const tabs = [
   {
@@ -16,21 +16,17 @@ const tabs = [
     name: "ВОЗВРАЩЕНИЕ",
   },
 ];
-export const Navigation = ({ activeTab, setActiveTab }) => {
-  return (
-    <nav className="navigation">
-      {tabs.map((tab) => (
-        <button
-          key={tab.id}
-          onClick={() => setActiveTab(tab.id)}
-          className={
-            activeTab === tab.id
-              ? "navigation__button_active"
-              : "navigation__button"
-          }>
-          {tab.name}
-        </button>
-      ))}
-    </nav>
-  );
-};
+export const Navigation = ({ activeTab, setActiveTab }) => (
+  <nav className="navigation">
+    {tabs.map(({ id, name }) => (
+      <button
+        key={id}
+        onClick={() => setActiveTab(id)}
+        className={
+          activeTab === id ? "navigation__button_active" : "navigation__button"
+        }>
+        {name}
+      </button>
+    ))}
+  </nav>
+);

@@ -1,15 +1,20 @@
-import "./Main.scss";
-import { DATA } from "../../data";
-import { Information } from "./Information";
+import React, { useState, useCallback } from "react";
 
+import "./styles.scss";
+import { NAVIGATION } from "../../constants";
+import { Information } from "./components/Information/Information";
 import { Navigation } from "../UI/Navigation/Navigation";
-import { useState } from "react";
+import { computeHeadingLevel } from "@testing-library/react";
 export const Main = ({ stateModalActive }) => {
   const [activeTab, setActiveTab] = useState(1);
 
-  const changeActiveTab = (id) => {
-    setActiveTab(id);
-  };
+  const changeActiveTab = useCallback(
+    (id) => {
+      console.log(id);
+      setActiveTab(id);
+    },
+    [setActiveTab]
+  );
 
   return (
     <div className="main">
@@ -23,7 +28,7 @@ export const Main = ({ stateModalActive }) => {
         }>
         <Information
           stateModalActive={stateModalActive}
-          block={DATA.find(({ id }) => id === activeTab)}
+          block={NAVIGATION.find(({ id }) => id === activeTab)}
         />
         <Navigation activeTab={activeTab} setActiveTab={changeActiveTab} />
       </div>

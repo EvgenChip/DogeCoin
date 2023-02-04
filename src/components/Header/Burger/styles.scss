@@ -1,9 +1,11 @@
 .burger {
   display: none;
+
   &__active {
     box-shadow: 0 0 10px rgba(214, 119, 10, 0.763);
     border-radius: 4px;
   }
+
   &__menu {
     z-index: 51;
     display: flex;
@@ -12,7 +14,6 @@
     height: 35px;
     position: absolute;
     top: 36px;
-
     padding-left: 2px;
     cursor: pointer;
   }
@@ -23,15 +24,18 @@
     height: 2px;
     background: rgba(255, 255, 255, 0.55);
     transition: 0.5s ease;
+
     &:hover {
       transition: 0.5s ease;
       background: greenyellow;
     }
+
     &:hover::before {
       background: greenyellow;
       width: 30px;
       transition: 0.5s ease;
     }
+
     &:hover::after {
       background: greenyellow;
       width: 30px;
@@ -47,6 +51,7 @@
       top: 6px;
       transition: 0.5s ease;
     }
+
     &::after {
       content: "";
       width: 15px;
@@ -58,13 +63,16 @@
     }
   }
 }
+
 .active {
   transition: 1s ease;
+
   .burger__line {
     position: relative;
     width: 30px;
     height: 2px;
     background: yellowgreen;
+
     &::before {
       content: "";
       width: 30px;
@@ -74,6 +82,7 @@
       top: 6px;
       transition: 1s ease;
     }
+
     &::after {
       content: "";
       width: 30px;
@@ -85,8 +94,75 @@
     }
   }
 }
+
+.burger-active {
+  position: absolute;
+  top: 90px;
+  left: -50px;
+  height: 100vh;
+  min-width: 100vw;
+  z-index: 999;
+  background: #131313;
+
+  &__contacts{
+    display: none;
+  }
+
+  &__item {
+    padding-left: 50px;
+    color: transparent;
+    text-decoration: none;
+    position: relative;
+  }
+
+  &__link {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 150%;
+    color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #808080;
+    transition: 0.5s ease;
+
+    &:hover {
+      color: aliceblue;
+      transition: 1s ease;
+    }
+  }
+}
+
+@media (max-width: 821px) {
+  .burger-active {
+    &__link {
+      padding-left: 0px;
+    }
+  }
+}
+
 @media (max-width: 1492px) {
   .burger {
     display: inline;
+  }
+}
+
+@media (max-width: 414px) {
+  .burger-active {
+    &__link{
+        font-size: 20px;
+    }
+    &__item{
+        padding-left: 0px;
+    }
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      &_tel {
+        padding-left: 5px;
+      }
+    }
   }
 }

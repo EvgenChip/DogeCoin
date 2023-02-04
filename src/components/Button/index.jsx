@@ -1,14 +1,18 @@
 import React from "react";
-import "./style.scss";
+import "./styles.scss";
 
 const buttonType = {
   normal: "normalType",
   small: "smallType",
 };
 
-export const Button = ({ children, type = "normal", onClick }) => {
+export const Button = ({ children, type = "normal", onClick, disabled }) => {
   return (
-    <div onClick={onClick} className={`buttonWrap ${buttonType[type]}`}>
+    <div
+      onClick={disabled ? () => {} : onClick}
+      className={`buttonWrap ${buttonType[type]} ${
+        disabled ? "disabled" : ""
+      }`}>
       {children}
     </div>
   );

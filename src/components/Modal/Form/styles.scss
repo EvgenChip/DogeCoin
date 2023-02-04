@@ -1,0 +1,65 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transform: skew(2deg);
+
+  &__button{
+    padding-top: 5px;
+    padding-left: 10px;
+  }
+
+  &__input {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 36px;
+    color: white;
+    height: 70px;
+    background: transparent;
+    border: 1px solid #2b2b2b;
+
+    &::placeholder {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    &_question {
+      padding-left: 36px;
+      padding-top: 23px;
+      color: white;
+      height: 150px;
+      background: transparent;
+      border: 1px solid #2b2b2b;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #fff;
+
+      &::placeholder {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #fff;
+      }
+    }
+  }
+}
+@media (max-width: 414px) {
+  .form {
+    transform: skew(0deg);
+  }
+}

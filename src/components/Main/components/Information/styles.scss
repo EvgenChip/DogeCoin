@@ -1,30 +1,45 @@
 .information {
-
   padding-top: 290px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   gap: 40px;
+
   &__title {
     transition: 1s ease;
     font-size: 42px;
     line-height: 51px;
     text-transform: uppercase;
-
     color: #ffffff;
   }
+
   &__description {
-    transition:  1s ease;
+    font-family: "Montserrat";
+    font-style: normal;
+    transition: 1s ease;
     font-size: 16px;
     line-height: 150%;
-
+    opacity: 0.79;
     color: #ffffff;
   }
+
   &__button {
     text-align: center;
+
     p {
       color: #ffffff;
     }
+  }
+}
+@media (max-width: 414px) {
+  .information {
+padding-top: 100px;
+gap: 0px;
+&__button{
+    padding-top: 40px;
+}
+&__title{
+    font-size: 30px;
+}
   }
 }

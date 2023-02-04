@@ -1,4 +1,4 @@
-export const dataImage = [
+export const mockImages = [
   {
     id: 1,
     img: "../../../assets/image/cardImage/Bitmap.svg",

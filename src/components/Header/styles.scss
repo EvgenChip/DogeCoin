@@ -1,0 +1,57 @@
+.header {
+  position: relative;
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+
+
+  &__menu {
+    display: flex;
+    gap: 42px;
+  }
+  &__item {
+    color: transparent;
+    :hover {
+      transition: 0.5s ease;
+      color: #c2ab81;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    text-align: center;
+
+    &_tel {
+      a {
+        padding-top: 20px;
+      }
+    }
+
+    &_request {
+      p {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 1492px) {
+    .header {
+      &__nav {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .header {
+    &__logo {
+      display: flex;
+      padding-left: 170px;
+    }
+    flex-direction: column;
+    &__contacts {
+      display: none;
+    }
+  }
+}

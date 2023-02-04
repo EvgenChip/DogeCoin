@@ -3,10 +3,20 @@
   inset: 0;
   top: 0;
   left: 0px;
-
   min-width: 100vw;
   z-index: 999;
   background-color: rgba(27, 27, 27, 0.8);
+
+  &__title {
+    p {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: #808080;
+    }
+  }
 
   &__wrap {
     transform: skew(-2deg);
@@ -14,15 +24,18 @@
     justify-content: space-between;
     padding: 100px 100px;
   }
+
   &__image {
     width: 50%;
     background-image: url("../../assets/image/modalLuna.svg");
   }
+
   &__request {
     width: 50%;
     padding: 90px 70px;
     background: #131313;
   }
+
   &__top {
     transform: skew(2deg);
     display: flex;
@@ -30,9 +43,52 @@
   }
 
   &__button {
+    padding-top: 35px;
+    opacity: 0.5;
     text-align: center;
+
     img {
       padding-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 821px) {
+  .modal {
+    &__image {
+      display: none;
+    }
+
+    &__request {
+      width: 100%;
+    }
+
+    &__wrap {
+      padding: 50px 50px;
+    }
+  }
+}
+@media (max-width: 414px) {
+  .modal {
+    &__request{
+        padding: 35px 10px;
+    }
+    &__wrap {
+      padding: 5px 5px;
+      transform: skew(0deg);
+    }
+    &__top {
+      transform: skew(0deg);
+      flex-direction: column-reverse;
+    }
+    &__button{
+        padding-top: 0px;
+        padding-left: 200px;
+    }
+    &__title{
+        h1{
+            font-size: 30px;
+        }
     }
   }
 }

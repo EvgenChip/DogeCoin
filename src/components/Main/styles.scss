@@ -1,5 +1,6 @@
 .main {
   position: relative;
+  padding-top: 50px;
 
   &__slider {
     z-index: 3;
@@ -9,12 +10,10 @@
     height: 1033px;
     position: relative;
     border-radius: 60px 60px 0px 0px;
-
     transition: opacity 1s ease;
 
     &::before {
       content: "";
-
       width: 100%;
       position: absolute;
       top: 0;
@@ -25,19 +24,40 @@
       margin-top: 651px;
     }
   }
+
   .doge {
+    background-size: cover;
     background-image: url(../../assets/image/dogeback.jpg);
     transition: 1s ease;
     background-repeat: no-repeat;
+
     &_down {
+        background-size: cover;
       background-image: url(../../assets/image/downBack.jpg);
       transition: 1s ease;
       background-repeat: no-repeat;
     }
+
     &_up {
-      background-size: 100%;
+        background-size: cover;
       background-image: url(../../assets/image/upBack.jpg);
       transition: 1s ease;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (max-width: 821px) {
+  .main {
+    &__slider {
+      padding: 0 50px;
+    }
+  }
+}
+@media (max-width: 414px) {
+  .main {
+    &__slider {
+      flex-direction: column;
     }
   }
 }

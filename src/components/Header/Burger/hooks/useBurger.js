@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 export const useBurger = () => {
   const [activeBurger, setActiveBurger] = useState(false);
 
-  const displayBurger = (e) => {
+  const displayBurger = () => {
     setActiveBurger(!activeBurger);
   };
 
@@ -43,5 +43,5 @@ export const useBurger = () => {
     };
   }, [activeBurger]);
 
-  return { displayBurger, activeBurger, setActiveBurger };
+  return { displayBurger, activeBurger };
 };

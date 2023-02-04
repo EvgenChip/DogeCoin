@@ -1,0 +1,42 @@
+.buttonWrap {
+  margin-left: 20px;
+  height: 60px;
+  transform: skew(-20deg);
+  text-align: center;
+  border: 1px solid #fff;
+  cursor: pointer;
+
+  &:hover {
+    background: #928061;
+  }
+
+  &.disabled:hover {
+    cursor: default;
+    background: #c2ab81;
+  }
+}
+
+.normalType {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  color: #fff;
+  width: 282px;
+  background: #c2ab81;
+
+  p {
+    padding-top: 10px;
+    transform: skew(20deg);
+  }
+}
+
+.smallType {
+  width: 93px;
+  background: transparent;
+
+  img {
+    padding-top: 20px;
+  }
+}

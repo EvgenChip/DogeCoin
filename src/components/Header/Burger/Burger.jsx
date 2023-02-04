@@ -1,9 +1,12 @@
-import "./burger.scss";
+import React from "react";
+
+import "./styles.scss";
 import { BurgerActive } from "./BurgerActive";
 import { useBurger } from "./hooks/useBurger";
 
 export const Burger = () => {
   const { displayBurger, activeBurger } = useBurger();
+
   return (
     <div className="burger">
       {activeBurger && <BurgerActive />}

@@ -6,24 +6,31 @@
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+
   &__button {
+    cursor: pointer;
     background: transparent;
     border: none;
-    color: #ffffff;
+    color: #fff;
     opacity: 0.6;
-    transition: opacity 0.4s ease;
     font-size: 14px;
     line-height: 150%;
 
-    cursor: pointer;
-    &:hover {
-      opacity: 1;
-    }
     &_active {
+      cursor: pointer;
       background: transparent;
       border: none;
-      color: #ffffff;
+      color: #fff;
       opacity: 0.9;
     }
   }
+}
+
+@media (max-width: 414px){
+    .navigation{
+        padding: 0px;
+        margin-bottom: 400px;
+        flex-direction: row;
+        align-items: center;
+    }
 }

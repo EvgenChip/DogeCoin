@@ -1,11 +1,16 @@
-import { Button } from "../Button";
+import { Button } from "../../../Button";
 
-import "./information.scss";
+import "./styles.scss";
+
 export const Information = ({ stateModalActive, block }) => {
+  const { title, description } = block;
+
   return (
     <div className="information">
-      <div className="information__title">{block.title}</div>
-      <div className="information__description">{block.description}</div>
+      <div className="information__title">
+        <h1>{title}</h1>{" "}
+      </div>
+      <div className="information__description">{description}</div>
       <div className="information__button">
         {" "}
         <Button onClick={stateModalActive}>
