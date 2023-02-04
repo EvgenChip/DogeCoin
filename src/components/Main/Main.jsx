@@ -17,7 +17,7 @@ export const Main = ({ stateModalActive }) => {
   );
 
   return (
-    <div className="main">
+    <main className="main">
       <div
         className={
           activeTab === 1
@@ -32,6 +32,6 @@ export const Main = ({ stateModalActive }) => {
         />
         <Navigation activeTab={activeTab} setActiveTab={changeActiveTab} />
       </div>
-    </div>
+    </main>
   );
 };

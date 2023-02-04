@@ -6,7 +6,7 @@ export const Information = ({ stateModalActive, block }) => {
   const { title, description } = block;
 
   return (
-    <div className="information">
+    <main className="information">
       <div className="information__title">
         <h1>{title}</h1>{" "}
       </div>
@@ -17,6 +17,6 @@ export const Information = ({ stateModalActive, block }) => {
           <p>Оставить заявку</p>
         </Button>{" "}
       </div>
-    </div>
+    </main>
   );
 };

@@ -21,7 +21,7 @@ export const Cards = () => {
   }, [cardLength, setCardLength]);
 
   return (
-    <div className="cards">
+    <main className="cards">
       <h1>Карточки</h1>
       <div className="cards__wrap">
         {data.map(({ id, title, body }) => {
@@ -53,6 +53,6 @@ export const Cards = () => {
           </Button>
         </div>
       )}
-    </div>
+    </main>
   );
 };
