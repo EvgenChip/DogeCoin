@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/DogeCoin/static/css/main.c6ee923a.css",
+    "main.js": "/DogeCoin/static/js/main.c3cd3e06.js",
+    "static/media/upBack.jpg": "/DogeCoin/static/media/upBack.e6f2d80bc8e1c7066600.jpg",
+    "static/media/modalLuna.svg": "/DogeCoin/static/media/modalLuna.0d6c0da32477cbecf902.svg",
+    "static/media/dogeback.jpg": "/DogeCoin/static/media/dogeback.f4c9652b70b6959e9220.jpg",
+    "static/media/Bitmap.svg": "/DogeCoin/static/media/Bitmap.dbaac1019437cedd28d4ec2af18b2abc.svg",
+    "static/media/downBack.jpg": "/DogeCoin/static/media/downBack.ecd6ef2a38aa69903f42.jpg",
+    "static/media/logoHeader.svg": "/DogeCoin/static/media/logoHeader.47e749fc140c34bdde1a06a0d75c94e8.svg",
+    "static/media/iconTel.svg": "/DogeCoin/static/media/iconTel.68ec2202dc8f8faeae448fe1f69415f2.svg",
+    "static/media/modalClose.svg": "/DogeCoin/static/media/modalClose.32bef42d8a646fe9604b9fb1b22bf346.svg",
+    "index.html": "/DogeCoin/index.html",
+    "main.c6ee923a.css.map": "/DogeCoin/static/css/main.c6ee923a.css.map",
+    "main.c3cd3e06.js.map": "/DogeCoin/static/js/main.c3cd3e06.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6ee923a.css",
+    "static/js/main.c3cd3e06.js"
+  ]
+}
